@@ -4,7 +4,7 @@ import { Avatar, Input } from '@material-ui/core';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { Button, Modal} from 'react-bootstrap';
 import './AddQuestion.css';
-function MyVerticallyCenteredModal(props) {
+function QuestionModal(props) {
     return (
       <Modal
         {...props}
@@ -39,4 +39,4 @@ function MyVerticallyCenteredModal(props) {
     );
   }
 
-  export default MyVerticallyCenteredModal;
+  export default QuestionModal;

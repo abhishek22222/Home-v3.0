@@ -2,7 +2,7 @@ import React from 'react';
 import { Avatar, Input } from '@material-ui/core';
 import { Button, Modal} from 'react-bootstrap';
 // import './answer.css'
-function MyVerticallyCenteredModal(props) {
+function AnswerModal(props) {
     return (
       <Modal
         {...props}
@@ -36,4 +36,4 @@ function MyVerticallyCenteredModal(props) {
       </Modal>
     );
   }
-  export default MyVerticallyCenteredModal;  
+  export default AnswerModal;  

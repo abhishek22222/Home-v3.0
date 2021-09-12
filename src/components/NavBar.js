@@ -7,15 +7,16 @@ import AssignmentTurnedInOutlinedIcon from "@material-ui/icons/AssignmentTurnedI
 import { Avatar, TextField } from '@material-ui/core';
 import *as ReactBootStrap from "react-bootstrap";
 import { Link } from 'react-router-dom';
-import MyVerticallyCenteredModal from './Pages/AddQuestions/AddQuestions';
+import QuestionModal from './Pages/AddQuestions/AddQuestions';
 import Button from '@restart/ui/esm/Button';
 import LoginModal from './Pages/Login/Login';
 
 
 export default function NavBar() {
 
-    const [modalShow, setModalShow] = React.useState(false);
-    const [modalShow1, ModalShow] = React.useState(false);
+    const [questionShow, setQuestionShow] = React.useState(false);
+    const [loginShow, LoginShow] = React.useState(false);
+    
     return (
         <>
             <div className="Header">
@@ -45,16 +46,16 @@ export default function NavBar() {
                                 </ReactBootStrap.Nav>
                             </ReactBootStrap.Nav>
                             <ReactBootStrap.Nav>
-                                <Button onClick={() => setModalShow(true) } className="addQuestion" >Add Question</Button>
-                                <MyVerticallyCenteredModal
-                                    show={modalShow}
-                                    onHide={() => setModalShow(false)}
+                                <Button onClick={() => setQuestionShow(true) } className="addQuestion" >Add Question</Button>
+                                <QuestionModal
+                                    show={questionShow}
+                                    onHide={() => setQuestionShow(false)}
 
                                 />
-                                <ReactBootStrap.Nav.Link onClick={() => ModalShow(true)} className="login" >Login</ReactBootStrap.Nav.Link>
+                                <ReactBootStrap.Nav.Link onClick={() => LoginShow(true)} className="login" >Login</ReactBootStrap.Nav.Link>
                                 <LoginModal
-                                    show={modalShow1} 
-                                    onHide={() => ModalShow(false)}
+                                    show={loginShow} 
+                                    onHide={() => LoginShow(false)}
                                 />
                                 <ReactBootStrap.Nav.Link as={Link} to="/profile" className="avatar"><Avatar /></ReactBootStrap.Nav.Link>
 
