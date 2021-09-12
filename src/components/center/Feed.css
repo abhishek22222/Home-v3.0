@@ -1,0 +1,11 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 25vw;
+  }
+@media screen and (max-width: 600px) {
+  .feed {
+    width: 60vw;
+  }
+}
